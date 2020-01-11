@@ -16,6 +16,8 @@ const goblin = {
   health: 10,
 }
 
+const gameDiv = document.querySelector('#game-div');
+
 function rest(person) {
   person.health === 10 
     ? alert('You don\'t need to rest right now') 
@@ -57,7 +59,12 @@ function hitEnemy(enemy) {
 }
 
 document.querySelector('#inn').addEventListener('click', () => { rest(hero); displayStats(hero) });
-document.querySelector('#dagger').addEventListener('click', () => pickUpItem(hero, dagger));
+
+document.querySelector('#dagger').addEventListener('click', () => {
+  pickUpItem(hero, dagger);
+  gameDiv.removeChild(document.querySelector('#dagger'));
+});
+
 document.querySelector('#bag').addEventListener('click', () => { equipWeapon(hero); displayStats(hero) });
 
 document.querySelector('#change-name').addEventListener('submit', (e) => {
