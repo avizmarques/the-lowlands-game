@@ -3,15 +3,31 @@
     <meta charset="utf-8">
     <title>Mocha Tests</title>
     <link href="lib/mocha.css" rel="stylesheet" />
+    <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-
-
   <!-- 👍 YOUR HTML HERE 👍 -->
 
-  <img id="inn" src="https://i.pinimg.com/originals/61/b0/d5/61b0d52beeb2688287f7519d2d1743aa.jpg" width="200px">
-  <img id="dagger" src="https://i.pinimg.com/600x315/9e/ee/4f/9eee4ff762b5315501db2194a7890b71.jpg" width="200px">
-  <img id="bag" src="https://i.etsystatic.com/18173719/r/il/8dd228/1969758167/il_570xN.1969758167_cbai.jpg" width="200px">
+  <main>
+    <h1>Game name</h1>
+
+    <img id="inn" src="https://i.pinimg.com/originals/61/b0/d5/61b0d52beeb2688287f7519d2d1743aa.jpg">
+    <img id="dagger" src="https://i.pinimg.com/600x315/9e/ee/4f/9eee4ff762b5315501db2194a7890b71.jpg">
+    <img id="bag" src="https://i.etsystatic.com/18173719/r/il/8dd228/1969758167/il_570xN.1969758167_cbai.jpg">
+
+    <form id="change-name">
+      <p>Name your hero</p>
+      <input id="name" type="text">
+      <button type="default">Submit</button>
+    </form>  
+
+    <div id="stats">
+      <h2 id="display-name"></h2>
+      <p id="hp"></p>
+      <p id="weapon"></p>
+      <p id="weapon-dmg"></p>
+    </div>
+  </main>
   
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
