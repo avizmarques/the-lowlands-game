@@ -16,7 +16,7 @@ const goblin = {
   health: 10,
 }
 
-const gameDiv = document.querySelector('#game-div');
+const gameDiv = document.querySelector('#game');
 
 function rest(person) {
   person.health === 10 
