@@ -14,9 +14,12 @@ const goblin = { name: 'goblin', health: 10 };
 const gameDiv = document.querySelector('#game');
 
 function rest(person) {
-  person.health === 10 
-    ? alert('You don\'t need to rest right now') 
-    : person.health = 10; return person;
+  if(person.health === 10) {
+    alert('You don\'t need to rest right now');
+  } else {
+    person.health = 10; 
+    return person;
+  }
 }
 
 function pickUpItem(person, weapon) {
